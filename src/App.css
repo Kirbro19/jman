@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("./fonts/NunitoSans-Regular.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  width: 100%;
+}
+
+.left-house {
+  position: absolute;
+  width: 20%;
+  bottom: 0px;
+  left: 0px;
+}
+
+.right-house {
+  position: absolute;
+  width: 20%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.App {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1rem auto 0;
+  max-width: 375px;
+  /* border: 1px solid rgba(128, 128, 128, 0.5); */
+  border-radius: 20px;
+  background: #fff;
+  max-height: 95vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 960px) {
+  .App {
+    background: #eff1f5;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.App__top-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* border: 1px solid grey; */
+  width: 100%;
+  height: 150px;
+  margin-top: 1.5rem;
+}
+
+.App__map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  /* box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.25); */
+}
+
+@media (max-width: 960px) {
+  .App__map {
+    background-image: url("./images/leftMenu.png");
+    background-repeat: no-repeat;  
+  }
+}
+
+.App__map-icon {
+  margin-right: 40px;
+}
+
+.App__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App__logo {
+  width: 80px;
+  height: 80px;
+}
+
+.App__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  /* box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.25); */
+}
+
+@media (max-width: 960px) {
+  .App__menu {
+    background-image: url("./images/rightMenu.png");
+    background-repeat: no-repeat;  
+  }
+}
+
+.App__menu-icon {
+  margin-left: 40px;
+}
+
+.App__swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.App__bottom-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+@media (max-width: 960px) {
+  .App__bottom-menu {
+    background-color: #eff1f5;
+  }
+}
+
+.App__payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+  .App__payment {
+    background-color: #26ca79;
+    border-radius: 0 1000px 0 0;
+  }
+}
+
+.App__bottom-menu__block {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.App__bottom-menu__block-half {
+  position: relative;
+  width: 120%;
+  height: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 960px) {
+  .App__bottom-menu__block-half {
+    background-color: #26ca79;
+  }
+}
+
+.App__telegram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+  border-radius: 1000px 0 0 0;
+}
+
+@media (max-width: 960px) {
+  .App__telegram {
+    background-color: #26ca79;
+  }
+}
+
+.App__bottom-menu__footer {
+  width: 100%;
+  height: 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+@media (max-width: 960px) {
+  .App__bottom-menu__footer {
+    background-color: #26ca79;
   }
 }
